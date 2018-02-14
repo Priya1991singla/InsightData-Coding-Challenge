@@ -4,7 +4,7 @@ Contains solution files for coding challenge given by InsightData
 # Table of Contents
 1. [Overview](README.md#overview)
 2. [Problem Statement](README.md#problem-statement)
-3. [Methodology] (README.md#methodology)
+3. [Methodology](README.md#methodology)
 3. [Testing](README.md#testing)
 
 
@@ -36,7 +36,7 @@ The following steps are followed to solve the challenge:
 * Create following variables:
 	* `count`: Initialize with 0. Keeps count of repeated donors
 	* `amt`: Empty List to record transaction amount of repeated donors
-* Read the input files i.e. percentile.txt and itcont.txt
+* Read the input files i.e. `percentile.txt` and `itcont.txt`
 * While reading every line from the itcont file, do the following:
 	* Split the line on `|`
 	* Define every needed element as descriptive variable
@@ -48,7 +48,7 @@ The following steps are followed to solve the challenge:
 	* If match is found then check if the data is using back date from registered date or not
 	* If data is from back date then skip and read next line from file
 	* If data is not from back date then increment the `count` variable by 1, add the transaction amount to `amt` variable and calculate the percentile for so far encountered repeated donors using nearest-rank method
-	* Write all the needed details of the so far encountered repeated donors in the needed format to the output file i.e. repeat_donors.txt
+	* Write all the needed details of the so far encountered repeated donors in the needed format to the output file i.e. `repeat_donors.txt`
 * Close all the opened files
 
 The methods created are as follows:
