@@ -49,6 +49,7 @@ def add_unique_donor(unique_list, details):
     return(unique_list.append(new_donor,
                               ignore_index=True))
 
+
 def check_data_order(new_date, old_date):
 	"""Check if data is of back-date"""
 	if old_date <= new_date:
