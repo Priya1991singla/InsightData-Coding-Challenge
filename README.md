@@ -11,7 +11,7 @@ Contains solution files for coding challenge given by InsightData
 # Overview
 
 This repository is made for the purpose of presenting participation in coding challenege by InsightData (Data Engineering).
-The analysis code is written in Python which use the package `pandas` and `math`.
+The analysis code is written in Python which use the package `pandas`, `re`, `datetime` and `math`.
 
 # Problem Statement
 
@@ -53,8 +53,13 @@ The following steps are followed to solve the challenge:
 
 The methods created are as follows:
 
-* data_quality-checks(): This function takes the data to be checked according to the input considerations given and return whether or not the data is acceptable for further computation
-* data_convert(): This function takes zip code, year and transaction amount and convert it into desired data type
+* PercentileNumericError: This class extends the Exception class and handle the error if percentile is not numeric or is null
+* data_null_checks(): This function takes the data to be checked if there are nulls
+* data_notnull_checks(): This function checks if the data is not null
+* data_numeric_checks(): This function checks if the data given is numeric
+* data_alpha_checks(): This function checks if the data given matches with the input alphabetical pattern
+* data_convert(): This function takes data and convert it into desired data type
+* data_slice(): This function slice the data from given start to given end
 * check_repeat_donors(): This function checks the donor details in `unique_donor` table to find repeated donors 
 * add_unique_donor(): This function add the unique donor details in the `unique_donor` table
 * check_data_order(): This function helps in mapping out of order data. If some donor details are from back date then they are skipped in order to maintain the current computation
@@ -68,8 +73,10 @@ The methods created are as follows:
 Make sure you have the following installed before testing:
 
 * Python
-* Pandas (Python package)
-* Math (Python package)
+* pandas (Python package)
+* math (Python package)
+* datetime (Python package)
+* re (Python package)
 
 Create a new folder `test_n` in `insight_testsuite\tests` folder. Create two more folders as `input` and `output` in the folder `test_n`. Put your version of both the input files (`percentile.txt` and `itcont.txt`) and output file (`repeat_donors.txt`) in these folder.
 
